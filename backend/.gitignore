@@ -1,31 +1,31 @@
-# Python bytecode & cache
-__pycache__/
-*.py[cod]
-*$py.class
+# # Python bytecode & cache
+# __pycache__/
+# *.py[cod]
+# *$py.class
 
-# Environments
-.venv/
-venv/
-ENV/
-env/
+# # Environments
+# .venv/
+# venv/
+# ENV/
+# env/
 
-# Environment variables & secrets
-.env
-.env.*
-!.env.example
+# # Environment variables & secrets
+# .env
+# .env.*
+# !.env.example
 
-# IDEs & Editors
-.idea/
-.vscode/
-*.swp
-*.swo
+# # IDEs & Editors
+# .idea/
+# .vscode/
+# *.swp
+# *.swo
 
-# Testing & Coverage
-.pytest_cache/
-.coverage
-htmlcov/
+# # Testing & Coverage
+# .pytest_cache/
+# .coverage
+# htmlcov/
 
-# Logs & Database
-*.log
-*.sqlite3
-*.db
+# # Logs & Database
+# *.log
+# *.sqlite3
+# *.db
