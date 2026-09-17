@@ -14,3 +14,16 @@ class Story():
 
 
     nodes= relationship("StoryNode", back_populates="story")
+
+class Story(Base):
+    __tablename__ = "story_nodes"
+
+    id = Column(Interger, primary_key=True,index=True)
+    story_id = Column(Interger, ForeignKey("stories.id"), index=True)
+    content = Column(String)
+    is_root = Column(Boolean, default=False)
+    is_ending = Column(Boolean, default=False)
+    is_wnning_ending = Column(Boolean, default=False)
+    options = Column(JSON, default=list)
+
+    story = relationship("Story", back_populates="nodes")
