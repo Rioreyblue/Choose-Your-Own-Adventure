@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends, HTTPException,Cookie
 from sqlalchemy.orm import Session
 
 
-from backend.db.database import get_db
-from backend.models.job import StoryJob
-from backend.schemas.job import StoryJobResponse 
+from db.database import get_db
+from models.job import StoryJob
+from schemas.job import StoryJobResponse 
 
 router = APIRouter(
     prefix="/jobs",

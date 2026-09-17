@@ -1,10 +1,10 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.sql import func
 
-from backend.db.database import Base
+from db.database import Base
 
 class StoryJob(Base):
-    ___tablename__ = "story_jobs"
+    __tablename__ = "story_jobs"
 
     id=Column(Integer, primary_key=True, index=True)
     job_id=Column(String, index=True,unique=True)

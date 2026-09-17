@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey, J
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 
-from backend.db.database import Base
+from db.database import Base
 
 class Story():
     __tablename__="stories"
@@ -15,7 +15,7 @@ class Story():
 
     nodes= relationship("StoryNode", back_populates="story")
 
-class Story(Base):
+class StoryNode(Base):
     __tablename__ = "story_nodes"
 
     id = Column(Integer, primary_key=True,index=True)
@@ -23,7 +23,7 @@ class Story(Base):
     content = Column(String)
     is_root = Column(Boolean, default=False)
     is_ending = Column(Boolean, default=False)
-    is_wnning_ending = Column(Boolean, default=False)
+    is_winning_ending = Column(Boolean, default=False)
     options = Column(JSON, default=list)
 
     story = relationship("Story", back_populates="nodes")
