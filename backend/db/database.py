@@ -13,11 +13,13 @@ SessionLocal = sessionmaker(autocommit=False,autoflush=False,bind=engine)
 Base = declarative_base()
 
 def get_db():
-    db = SessionLocal
+    db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
 
 def create_tables():
+    import models.job  # noqa: F401
+    import models.story  # noqa: F401
     Base.metadata.create_all(bind=engine)

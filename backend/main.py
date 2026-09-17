@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 # relative from my config and .env 
 from core.config import settings
 from routers import story, job
+from db.database import create_tables
+
+create_tables()
 
 app = FastAPI(
     title= "Rey System \"Generate Your Adventure Game Api\"",
