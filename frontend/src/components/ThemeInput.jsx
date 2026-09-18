@@ -35,3 +35,5 @@ function ThemeInput({onSubmit}){
         </form>
     </div>
 }
+
+export default ThemeInput;
