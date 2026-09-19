@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import {useParams, useNavigate} from "react"
+import {useParams, useNavigate} from "react-router-dom"
 import axios from 'axios';
-import LoadingStatus from "/LoadingStatus.jsx"
+import LoadingStatus from "./LoadingStatus.jsx"
 import StoryGame from "./StoryGame";
 
 const API_BASE_URL = "/api"
@@ -23,7 +23,7 @@ function StoryLoader(){
         setError(null)
 
         try{
-            const response = await axios.get(`{$API_BASE_URL}/stories/${storyId}/complete`)
+            const response = await axios.get(`${API_BASE_URL}/stories/${storyId}/complete`)
             setStory(response.data)
             setLoading(false)
         } catch (err){
@@ -45,7 +45,7 @@ function StoryLoader(){
         return <LoadingStatus theme={"story"}/>
      }
 
-     if (err){
+     if (error){
         return <div className="story-loader">
             <div className="error-message">
                 <h2>Story not Found</h2>
