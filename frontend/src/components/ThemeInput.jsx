@@ -11,7 +11,7 @@ function ThemeInput({onSubmit}){
             setError("Please enter a theme name");
             return;
         }
-        onSubmit(Theme);
+        onSubmit(theme);
     }
 
     return <div className="theme-input-container">
